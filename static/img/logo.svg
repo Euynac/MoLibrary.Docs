@@ -1,0 +1,10 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text { font: bold 60px sans-serif; fill: #2e8555; }
+    .accent { fill: #25c2a0; }
+  </style>
+  <rect width="190" height="190" x="5" y="5" rx="20" ry="20" fill="white" stroke="#2e8555" stroke-width="4"/>
+  <text x="43" y="100" class="text">Mo</text>
+  <rect x="43" y="120" width="114" height="10" class="accent" rx="5" ry="5"/>
+  <text x="43" y="165" class="text">Lib</text>
+</svg> 
