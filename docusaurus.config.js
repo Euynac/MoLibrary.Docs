@@ -23,7 +23,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Euynac', // Usually your GitHub org/user name.
-  projectName: 'euynac.github.io', // Usually your repo name.
+  projectName: 'MoLibrary', // Usually your repo name.
   trailingSlash: false,
   deploymentBranch: 'main',
 

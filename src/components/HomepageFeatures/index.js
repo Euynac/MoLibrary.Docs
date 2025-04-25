@@ -4,32 +4,32 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: '模块化设计',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        每个组件都是独立的，您可以只使用所需的模块，无需引入整个框架。
+        MoLibrary采用统一的注册和配置模式，让您的开发体验更加一致。
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: '高性能实现',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        经过优化的性能实现，所有模块都关注于提高应用程序效率。
+        自动中间件注册、防止重复注册、及时释放临时对象，减少资源占用。
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: '.NET 原生体验',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        充分利用C#类型系统，提供强类型支持。详细的文档和示例代码，
+        帮助您快速上手并构建高质量的应用程序。
       </>
     ),
   },
