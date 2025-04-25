@@ -24,7 +24,11 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.7.0",
-    "@docusaurus/types": "3.7.0"
+    "@docusaurus/types": "3.7.0",
+    "remark": "^15.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-stringify": "^11.0.0",
+    "unified": "^11.0.5"
   },
   "browserslist": {
     "production": [

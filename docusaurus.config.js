@@ -6,6 +6,9 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
+// 使用CommonJS格式引入插件
+const remarkFilenameToTitle = require('./plugins/remark-filename-to-title');
+
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
@@ -49,6 +52,10 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/Euynac/MoLibrary/tree/main/docs/',
+          // 使用标准格式配置remark插件
+        /*   beforeDefaultRemarkPlugins: [
+            [remarkFilenameToTitle, { removeFirstHeading: true }]
+          ], */
         },
         blog: {
           showReadingTime: true,
