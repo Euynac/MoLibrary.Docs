@@ -1,19 +1,8 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+MoLibrary:
+  description: MoLibrary 相关内容
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+欢迎:
+  description: 欢迎使用 MoLibrary
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+更新:
+  description: MoLibrary 更新内容 

@@ -2,46 +2,61 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# 快速开始
 
-Let's discover **Docusaurus in less than 5 minutes**.
+MoLibrary 是一个模块化的 .NET 基础设施库，旨在提供可独立使用的组件，帮助您快速构建高质量的应用程序。
 
-## Getting Started
+## 安装
 
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
+选择您需要的模块进行安装：
 
 ```bash
-npm init docusaurus@latest my-website classic
+# 安装核心库
+dotnet add package MoLibrary.Core
+
+# 安装仓储模块
+dotnet add package MoLibrary.Repository
+
+# 安装依赖注入模块
+dotnet add package MoLibrary.DependencyInjection
+
+# 其他模块...
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+## 基本使用
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+MoLibrary 使用模块化的方式来注册和配置服务，简单易用：
 
-## Start your site
+```csharp
+// 注册模块
+services.AddMoModule();
 
-Run the development server:
-
-```bash
-cd my-website
-npm run start
+// 每个模块的注册方式类似
+services.AddMoModuleAuthorization(options => {
+    // 配置模块选项
+    options.DefaultScheme = "Bearer";
+});
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+模块通常会返回一个 `ModuleGuide` 对象，用于进一步配置模块：
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+```csharp
+services.AddMoModuleRepository()
+        .ConfigureDatabase(options => {
+            options.ConnectionString = "your-connection-string";
+        })
+        .AddDefaultRepositories();
+```
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+## 核心概念
+
+MoLibrary 的核心概念是 `MoModule`，每个模块遵循统一的注册和配置模式：
+
+1. **ModuleOption\{ModuleName\}**: 模块的配置选项
+2. **ModuleGuide\{ModuleName\}**: 模块配置的向导类
+3. **Module\{ModuleName\}**: 包含依赖注入和中间件配置的具体实现
+4. **ModuleBuilderExtensions\{ModuleName\}**: 面向用户的扩展方法
+
+## 下一步
+
+请查看各个模块的详细文档，了解更多高级功能和最佳实践。
