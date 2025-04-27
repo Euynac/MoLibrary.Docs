@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DomainDrivenDesign/领域驱动设计简介.md",
+                "file": "DependencyInjection/自动依赖注入MoDependency.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "领域驱动设计简介"
+              "title": "自动依赖注入MoDependency"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DomainDrivenDesign/领域驱动设计简介.md",
+                "file": "DependencyInjection/自动依赖注入MoDependency.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 领域驱动设计简介"
+              "title": "Outline of 自动依赖注入MoDependency"
             }
           },
           {
@@ -207,6 +207,9 @@
   },
   "active": "8ca25b9d1b0f8d08",
   "lastOpenFiles": [
+    "DataChannel/消息通路DataChannel.md",
+    "Configuration/配置类MoConfiguration.md",
+    "AutoModel/自动模型AutoModel.md",
     "Framework/项目单元ProjectUnit.md",
     "DomainDrivenDesign/领域驱动设计简介.md",
     "intro.md",
@@ -216,15 +219,12 @@
     "getting-started.md",
     "模块MoModule.md",
     "模块MoModule3.md",
-    "AutoModel/自动模型AutoModel.md",
     "Framework",
     "Repository/工作单元UnitOfWork.md",
     "Authority",
     "Repository/仓储层MoRepository.md",
     "DomainDrivenDesign/应用服务MoApplicationService.md",
     "BackgroundJob/后台任务BackgroundJob.md",
-    "Configuration/配置类MoConfiguration.md",
-    "DataChannel/消息通路DataChannel.md",
     "DependencyInjection/自动依赖注入MoDependency.md",
     "SignalR/MoSignalR.md",
     "BackgroundJob",
