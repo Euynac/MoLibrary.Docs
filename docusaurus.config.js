@@ -51,8 +51,52 @@ const config = {
             'https://github.com/Euynac/MoLibrary/tree/main/docs/',
           // 设置不使用文档内的标题作为侧边栏显示的标题，而使用文件名
           routeBasePath: '/docs',
-          // 允许使用自定义侧边栏标签覆盖文档标题
-          numberPrefixParser: false,
+          // 使用文件名作为侧边栏标题，而不是文档内容中的第一个标题
+          sidebarItemsGenerator: async ({
+            defaultSidebarItemsGenerator,
+            numberPrefixParser,
+            item,
+            version,
+            docs,
+            categoriesMetadata,
+            isCategoryIndex,
+          }) => {
+            // 获取默认的侧边栏项
+            const sidebarItems = await defaultSidebarItemsGenerator({
+              numberPrefixParser,
+              item,
+              version,
+              docs,
+              categoriesMetadata,
+              isCategoryIndex,
+            });
+            
+            // 遍历所有项并调整标签
+            function processItems(items) {
+              return items.map(sidebarItem => {
+                // 如果是doc类型，就使用文件名作为标签
+                if (sidebarItem.type === 'doc') {
+                  const docPath = sidebarItem.id;
+                  // 如果是index文件，使用其父文件夹名作为标签
+                  if (docPath.endsWith('/index')) {
+                    const folderName = docPath.split('/').slice(-2, -1)[0];
+                    sidebarItem.label = folderName;
+                  } else {
+                    // 否则使用文件名(不含扩展名)作为标签
+                    const fileName = docPath.split('/').pop();
+                    sidebarItem.label = fileName;
+                  }
+                }
+                // 如果是分类，递归处理其子项
+                if (sidebarItem.type === 'category' && sidebarItem.items) {
+                  sidebarItem.items = processItems(sidebarItem.items);
+                }
+                return sidebarItem;
+              });
+            }
+            
+            return processItems(sidebarItems);
+          },
         },
         blog: {
           showReadingTime: true,
