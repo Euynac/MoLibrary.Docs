@@ -49,6 +49,10 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/Euynac/MoLibrary/tree/main/docs/',
+          // 设置不使用文档内的标题作为侧边栏显示的标题，而使用文件名
+          routeBasePath: '/docs',
+          // 允许使用自定义侧边栏标签覆盖文档标题
+          numberPrefixParser: false,
         },
         blog: {
           showReadingTime: true,
