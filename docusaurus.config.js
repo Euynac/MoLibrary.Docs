@@ -5,6 +5,8 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+// 引入自动侧边栏插件
+const autoSidebarPlugin = require('./plugins/docusaurus-plugin-auto-sidebar');
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -38,6 +40,24 @@ const config = {
     locales: ['zh-Hans', 'en'],
   },
 
+  // 添加插件配置
+  plugins: [
+    // 配置自动侧边栏插件
+    [
+      autoSidebarPlugin,
+      {
+        // 将驼峰式命名转换为空格分隔的标题
+        transformLabel: (folderName) => {
+          // 这里可以自定义显示逻辑，例如将驼峰命名转为空格分隔
+          return folderName
+            .replace(/([A-Z])/g, ' $1') // 在大写字母前添加空格
+            .replace(/^./, (str) => str.toUpperCase()) // 首字母大写
+            .trim();
+        },
+      }
+    ],
+  ],
+
   presets: [
     [
       'classic',
@@ -49,54 +69,8 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/Euynac/MoLibrary/tree/main/docs/',
-          // 设置不使用文档内的标题作为侧边栏显示的标题，而使用文件名
+          // 设置文档路由基础路径
           routeBasePath: '/docs',
-          // 使用文件名作为侧边栏标题，而不是文档内容中的第一个标题
-          sidebarItemsGenerator: async ({
-            defaultSidebarItemsGenerator,
-            numberPrefixParser,
-            item,
-            version,
-            docs,
-            categoriesMetadata,
-            isCategoryIndex,
-          }) => {
-            // 获取默认的侧边栏项
-            const sidebarItems = await defaultSidebarItemsGenerator({
-              numberPrefixParser,
-              item,
-              version,
-              docs,
-              categoriesMetadata,
-              isCategoryIndex,
-            });
-            
-            // 遍历所有项并调整标签
-            function processItems(items) {
-              return items.map(sidebarItem => {
-                // 如果是doc类型，就使用文件名作为标签
-                if (sidebarItem.type === 'doc') {
-                  const docPath = sidebarItem.id;
-                  // 如果是index文件，使用其父文件夹名作为标签
-                  if (docPath.endsWith('/index')) {
-                    const folderName = docPath.split('/').slice(-2, -1)[0];
-                    sidebarItem.label = folderName;
-                  } else {
-                    // 否则使用文件名(不含扩展名)作为标签
-                    const fileName = docPath.split('/').pop();
-                    sidebarItem.label = fileName;
-                  }
-                }
-                // 如果是分类，递归处理其子项
-                if (sidebarItem.type === 'category' && sidebarItem.items) {
-                  sidebarItem.items = processItems(sidebarItem.items);
-                }
-                return sidebarItem;
-              });
-            }
-            
-            return processItems(sidebarItems);
-          },
         },
         blog: {
           showReadingTime: true,
