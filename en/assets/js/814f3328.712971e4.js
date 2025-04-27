@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_docs=self.webpackChunkmy_docs||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"\u6b22\u8fce\u4f7f\u7528 MoLibrary","permalink":"/MoLibrary.Docs/en/blog/welcome","unlisted":false,"date":"2025-04-27T13:15:50.000Z"}]}')}}]);
