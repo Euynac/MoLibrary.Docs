@@ -129,10 +129,6 @@ const config = {
                 label: '快速开始',
                 to: '/docs/intro',
               },
-              {
-                label: '模块',
-                to: '/docs/module',
-              },
             ],
           },
           {

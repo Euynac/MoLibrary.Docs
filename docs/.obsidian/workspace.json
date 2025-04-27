@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Framework/项目单元ProjectUnit.md",
+                "file": "DomainDrivenDesign/领域驱动设计简介.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "项目单元ProjectUnit"
+              "title": "领域驱动设计简介"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Framework/项目单元ProjectUnit.md",
+                "file": "DomainDrivenDesign/领域驱动设计简介.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 项目单元ProjectUnit"
+              "title": "Outline of 领域驱动设计简介"
             }
           },
           {
@@ -207,6 +207,8 @@
   },
   "active": "8ca25b9d1b0f8d08",
   "lastOpenFiles": [
+    "Framework/项目单元ProjectUnit.md",
+    "DomainDrivenDesign/领域驱动设计简介.md",
     "intro.md",
     "AI-based编程.md",
     "welcome.md",
@@ -215,13 +217,11 @@
     "模块MoModule.md",
     "模块MoModule3.md",
     "AutoModel/自动模型AutoModel.md",
-    "Framework/项目单元ProjectUnit.md",
     "Framework",
     "Repository/工作单元UnitOfWork.md",
     "Authority",
     "Repository/仓储层MoRepository.md",
     "DomainDrivenDesign/应用服务MoApplicationService.md",
-    "DomainDrivenDesign/领域驱动设计简介.md",
     "BackgroundJob/后台任务BackgroundJob.md",
     "Configuration/配置类MoConfiguration.md",
     "DataChannel/消息通路DataChannel.md",
