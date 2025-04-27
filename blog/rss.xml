@@ -4,7 +4,7 @@
         <title>MoLibrary Blog</title>
         <link>https://euynac.github.io/MoLibrary.Docs/blog</link>
         <description>MoLibrary Blog</description>
-        <lastBuildDate>Sun, 27 Apr 2025 09:37:50 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 27 Apr 2025 10:10:37 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-Hans</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[欢迎使用 MoLibrary]]></title>
             <link>https://euynac.github.io/MoLibrary.Docs/blog/welcome</link>
             <guid>https://euynac.github.io/MoLibrary.Docs/blog/welcome</guid>
-            <pubDate>Sun, 27 Apr 2025 09:37:50 GMT</pubDate>
+            <pubDate>Sun, 27 Apr 2025 10:10:37 GMT</pubDate>
             <description><![CDATA[我们很高兴向您介绍 MoLibrary，这是一个模块化的 .NET 基础设施库，旨在提供可独立使用的组件，帮助您快速构建高质量的应用程序。]]></description>
             <content:encoded><![CDATA[<p>我们很高兴向您介绍 MoLibrary，这是一个模块化的 .NET 基础设施库，旨在提供可独立使用的组件，帮助您快速构建高质量的应用程序。</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="为什么选择-molibrary">为什么选择 MoLibrary？<a href="https://euynac.github.io/MoLibrary.Docs/blog/welcome#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9-molibrary" class="hash-link" aria-label="为什么选择 MoLibrary？的直接链接" title="为什么选择 MoLibrary？的直接链接">​</a></h2>
