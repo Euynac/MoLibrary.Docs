@@ -1,60 +1,54 @@
 /**
- * @typedef {Object} PluginOptions
- * @property {Boolean} [folderBasedSidebar=true] 是否启用基于文件夹的侧边栏生成功能
+ * @typedef {Object} GeneratorOptions
  * @property {Boolean} [useFileNameAsLabel=true] 是否使用文件名作为文档标签而不是文档内的标题
+ * @property {Boolean} [useFolderNameAsCategory=true] 是否使用文件夹名作为分类标签
  * @property {Function} [transformLabel] 自定义文件夹名和文件名转换为标签的函数
  * @property {Boolean} [transformCategoryLabelOnly=false] 是否只转换分类标签，不转换文件标签
  */
 
 /**
- * Docusaurus插件：自动生成基于文件夹结构的侧边栏
+ * 创建一个自定义的侧边栏生成器，用于替换Docusaurus的默认生成器
  * 
- * @param {import('@docusaurus/types').LoadContext} context
- * @param {PluginOptions} options
- * @returns {import('@docusaurus/types').Plugin}
+ * @param {GeneratorOptions} options 生成器选项
+ * @returns {Function} 自定义的侧边栏生成器函数
  */
-function autoSidebarPlugin(context, options = {}) {
+function createSidebarItemsGenerator(options = {}) {
   const {
-    folderBasedSidebar = true,
     useFileNameAsLabel = true,
+    useFolderNameAsCategory = true,
     transformLabel = (name) => name,
     transformCategoryLabelOnly = false,
   } = options;
 
-  return {
-    name: 'docusaurus-plugin-auto-sidebar',
-    extendCli(cli) {
-      // 可以在未来扩展CLI命令
-    },
-    configureWebpack(config, isServer, utils) {
-      // 可能的webpack配置
-      return {};
-    },
+  /**
+   * 自定义侧边栏生成器
+   * 
+   * @param {Object} args Docusaurus传入的参数
+   * @returns {Promise<Array>} 处理后的侧边栏项
+   */
+  return async function customSidebarItemsGenerator(args) {
+    const {
+      defaultSidebarItemsGenerator,
+      numberPrefixParser,
+      item,
+      version,
+      docs,
+      categoriesMetadata,
+      isCategoryIndex,
+    } = args;
 
-    // 扩展或修改docusaurus配置
-    extendPluginConfig(pluginConfig, pluginId) {
-      // 只处理docs插件
-      if (pluginId !== 'docusaurus-plugin-content-docs' && !pluginId.endsWith('plugin-content-docs')) {
-        return pluginConfig;
-      }
+    // 先获取默认的侧边栏项
+    const sidebarItems = await defaultSidebarItemsGenerator({
+      numberPrefixParser,
+      item,
+      version,
+      docs,
+      categoriesMetadata,
+      isCategoryIndex,
+    });
 
-      if (!folderBasedSidebar && !useFileNameAsLabel) {
-        return pluginConfig;
-      }
-
-      // 注入sidebarItemsGenerator
-      return {
-        ...pluginConfig,
-        sidebarItemsGenerator: async (args) => {
-          // 先获取默认的侧边栏项
-          const defaultGenerator = pluginConfig.sidebarItemsGenerator || args.defaultSidebarItemsGenerator;
-          const sidebarItems = await defaultGenerator(args);
-
-          // 变换侧边栏项
-          return processItems(sidebarItems);
-        },
-      };
-    },
+    // 处理项目
+    return processItems(sidebarItems);
   };
 
   /**
@@ -69,7 +63,7 @@ function autoSidebarPlugin(context, options = {}) {
 
     return items.map(item => {
       // 如果是分类，设置分类名称为文件夹名并递归处理子项
-      if (item.type === 'category') {
+      if (useFolderNameAsCategory && item.type === 'category') {
         // 应用标签转换函数
         if (item.label) {
           item.label = transformLabel(item.label);
@@ -110,4 +104,4 @@ function autoSidebarPlugin(context, options = {}) {
   }
 }
 
-module.exports = autoSidebarPlugin; 
+module.exports = createSidebarItemsGenerator; 

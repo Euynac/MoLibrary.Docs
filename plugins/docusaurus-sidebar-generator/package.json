@@ -1,0 +1,11 @@
+{
+  "name": "docusaurus-sidebar-generator",
+  "version": "1.0.0",
+  "description": "自定义侧边栏生成器，用于替换Docusaurus的默认sidebarItemsGenerator",
+  "main": "index.js",
+  "author": "MoLibrary",
+  "license": "MIT",
+  "peerDependencies": {
+    "@docusaurus/core": "^3.0.0"
+  }
+} 

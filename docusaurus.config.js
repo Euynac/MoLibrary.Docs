@@ -5,8 +5,8 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
-// 引入自动侧边栏插件
-const autoSidebarPlugin = require('./plugins/docusaurus-plugin-auto-sidebar');
+// 引入自定义侧边栏生成器
+const createSidebarItemsGenerator = require('./plugins/docusaurus-sidebar-generator');
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -40,23 +40,8 @@ const config = {
     locales: ['zh-Hans', 'en'],
   },
 
-  // 添加插件配置
-  plugins: [
-    // 配置自动侧边栏插件
-    [
-      autoSidebarPlugin,
-      {
-        // 将驼峰式命名转换为空格分隔的标题
-        transformLabel: (folderName) => {
-          // 这里可以自定义显示逻辑，例如将驼峰命名转为空格分隔
-          return folderName
-            .replace(/([A-Z])/g, ' $1') // 在大写字母前添加空格
-            .replace(/^./, (str) => str.toUpperCase()) // 首字母大写
-            .trim();
-        },
-      }
-    ],
-  ],
+  // 不再需要插件配置，因为我们直接在docs配置中使用自定义生成器
+  plugins: [],
 
   presets: [
     [
@@ -71,6 +56,20 @@ const config = {
             'https://github.com/Euynac/MoLibrary/tree/main/docs/',
           // 设置文档路由基础路径
           routeBasePath: '/docs',
+          // 使用自定义的侧边栏生成器
+          sidebarItemsGenerator: createSidebarItemsGenerator({
+            // 使用文件名作为文档标签
+            useFileNameAsLabel: true,
+            // 使用文件夹名作为分类标签
+            useFolderNameAsCategory: true,
+            // 将驼峰式命名转换为空格分隔的标题
+            transformLabel: (name) => {
+              return name
+                .replace(/([A-Z])/g, ' $1') // 在大写字母前添加空格
+                .replace(/^./, (str) => str.toUpperCase()) // 首字母大写
+                .trim();
+            },
+          }),
         },
         blog: {
           showReadingTime: true,
