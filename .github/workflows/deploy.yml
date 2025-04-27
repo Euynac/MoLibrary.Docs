@@ -19,13 +19,13 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: yarn
+          cache: npm
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
-      
+        run: npm ci
+
       - name: Build website
-        run: yarn build
+        run: npm run build
 
       # 将构建的文件部署到 gh-pages 分支
       - name: Deploy to GitHub Pages
