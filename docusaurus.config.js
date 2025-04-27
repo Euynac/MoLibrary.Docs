@@ -65,8 +65,8 @@ const config = {
             // 将驼峰式命名转换为空格分隔的标题
             transformLabel: (name) => {
               return name
-                .replace(/([A-Z])/g, ' $1') // 在大写字母前添加空格
-                .replace(/^./, (str) => str.toUpperCase()) // 首字母大写
+                // .replace(/([A-Z])/g, ' $1') // 在大写字母前添加空格
+                // .replace(/^./, (str) => str.toUpperCase()) // 首字母大写
                 .trim();
             },
           }),
