@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_docs=self.webpackChunkmy_docs||[]).push([[5447],{5763:e=>{e.exports=JSON.parse('{"authors":[{"name":"MoLibrary \u56e2\u961f","title":"MoLibrary Core Team","url":"https://github.com/Euynac","imageURL":"https://github.com/Euynac.png","key":"euynac","page":null,"count":1}]}')}}]);

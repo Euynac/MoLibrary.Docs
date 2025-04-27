@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://euynac.github.io/MoLibrary.Docs/en/blog</id>
+    <title>MoLibrary Blog</title>
+    <updated>2025-04-27T09:37:50.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://euynac.github.io/MoLibrary.Docs/en/blog"/>
+    <subtitle>MoLibrary Blog</subtitle>
+    <icon>https://euynac.github.io/MoLibrary.Docs/en/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[欢迎使用 MoLibrary]]></title>
+        <id>https://euynac.github.io/MoLibrary.Docs/en/blog/welcome</id>
+        <link href="https://euynac.github.io/MoLibrary.Docs/en/blog/welcome"/>
+        <updated>2025-04-27T09:37:50.000Z</updated>
+        <summary type="html"><![CDATA[我们很高兴向您介绍 MoLibrary，这是一个模块化的 .NET 基础设施库，旨在提供可独立使用的组件，帮助您快速构建高质量的应用程序。]]></summary>
+        <content type="html"><![CDATA[<p>我们很高兴向您介绍 MoLibrary，这是一个模块化的 .NET 基础设施库，旨在提供可独立使用的组件，帮助您快速构建高质量的应用程序。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="为什么选择-molibrary">为什么选择 MoLibrary？<a href="https://euynac.github.io/MoLibrary.Docs/en/blog/welcome#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9-molibrary" class="hash-link" aria-label="Direct link to 为什么选择 MoLibrary？" title="Direct link to 为什么选择 MoLibrary？">​</a></h2>
+<p>MoLibrary 的核心设计理念是模块化和可组合性。我们不希望您为了使用某个特定功能而引入整个繁重的框架，因此每个模块都可以独立使用，同时又能与其他模块协同工作。</p>
+<p>主要特点：</p>
+<ul>
+<li><strong>模块化设计</strong>：只需引入您需要的组件</li>
+<li><strong>统一直觉的 API</strong>：所有模块遵循一致的设计模式</li>
+<li><strong>高性能</strong>：经过优化的实现，专注于性能</li>
+<li><strong>全面文档</strong>：详细的文档和示例代码</li>
+<li><strong>强类型支持</strong>：充分利用 C# 类型系统，提供良好的开发体验</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="可用模块">可用模块<a href="https://euynac.github.io/MoLibrary.Docs/en/blog/welcome#%E5%8F%AF%E7%94%A8%E6%A8%A1%E5%9D%97" class="hash-link" aria-label="Direct link to 可用模块" title="Direct link to 可用模块">​</a></h2>
+<p>MoLibrary 目前提供以下模块：</p>
+<ul>
+<li><strong>Core</strong>：核心功能和基础设施</li>
+<li><strong>DomainDrivenDesign</strong>：DDD 模式实现</li>
+<li><strong>Repository</strong>：仓储模式实现</li>
+<li><strong>DependencyInjection</strong>：增强的依赖注入功能</li>
+<li><strong>BackgroundJob</strong>：后台任务处理</li>
+<li><strong>SignalR</strong>：实时通信扩展</li>
+<li><strong>AutoModel</strong>：自动模型映射和转换</li>
+<li><strong>Configuration</strong>：配置管理</li>
+<li><strong>DataChannel</strong>：数据通道</li>
+<li><strong>Tool</strong>：常用工具和辅助功能</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="快速开始">快速开始<a href="https://euynac.github.io/MoLibrary.Docs/en/blog/welcome#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B" class="hash-link" aria-label="Direct link to 快速开始" title="Direct link to 快速开始">​</a></h2>
+<p>要使用 MoLibrary，只需通过 NuGet 安装所需模块：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">dotnet </span><span class="token function" style="color:#d73a49">add</span><span class="token plain"> package MoLibrary.Core</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">dotnet </span><span class="token function" style="color:#d73a49">add</span><span class="token plain"> package MoLibrary.Repository</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># 其他您需要的模块...</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>然后在您的 Startup.cs 中注册模块：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">public</span><span class="token plain"> </span><span class="token return-type class-name keyword" style="color:#00009f">void</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">ConfigureServices</span><span class="token punctuation" style="color:#393A34">(</span><span class="token class-name">IServiceCollection</span><span class="token plain"> services</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token comment" style="color:#999988;font-style:italic">// 添加 MoLibrary 核心模块</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    services</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">AddMoModule</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token comment" style="color:#999988;font-style:italic">// 添加其他需要的模块</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    services</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">AddMoModuleRepository</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">options </span><span class="token operator" style="color:#393A34">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token comment" style="color:#999988;font-style:italic">// 配置选项</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="下一步">下一步<a href="https://euynac.github.io/MoLibrary.Docs/en/blog/welcome#%E4%B8%8B%E4%B8%80%E6%AD%A5" class="hash-link" aria-label="Direct link to 下一步" title="Direct link to 下一步">​</a></h2>
+<p>我们正在积极开发新功能和改进现有模块。敬请关注以下即将推出的功能：</p>
+<ul>
+<li>更多数据访问提供程序</li>
+<li>增强的分布式系统支持</li>
+<li>更丰富的示例项目</li>
+</ul>
+<p>我们欢迎您的贡献和反馈！请访问我们的 <a href="https://github.com/Euynac/MoLibrary" target="_blank" rel="noopener noreferrer">GitHub 仓库</a> 了解更多信息。</p>]]></content>
+        <author>
+            <name>MoLibrary 团队</name>
+            <uri>https://github.com/Euynac</uri>
+        </author>
+        <category label="Molibrary" term="Molibrary"/>
+        <category label="欢迎" term="欢迎"/>
+    </entry>
+</feed>
