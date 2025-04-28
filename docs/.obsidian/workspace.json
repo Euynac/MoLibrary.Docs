@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DependencyInjection/自动依赖注入MoDependency.md",
+                "file": "Configuration/配置类MoConfiguration.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "自动依赖注入MoDependency"
+              "title": "配置类MoConfiguration"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DependencyInjection/自动依赖注入MoDependency.md",
+                "file": "Configuration/配置类MoConfiguration.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 自动依赖注入MoDependency"
+              "title": "Outline of 配置类MoConfiguration"
             }
           },
           {
@@ -207,31 +207,31 @@
   },
   "active": "8ca25b9d1b0f8d08",
   "lastOpenFiles": [
-    "DataChannel/消息通路DataChannel.md",
-    "Configuration/配置类MoConfiguration.md",
-    "AutoModel/自动模型AutoModel.md",
-    "Framework/项目单元ProjectUnit.md",
-    "DomainDrivenDesign/领域驱动设计简介.md",
-    "intro.md",
+    "DomainDrivenDesign/领域服务MoDomainService.md",
     "AI-based编程.md",
-    "welcome.md",
+    "Intro.md",
+    "DomainDrivenDesign/领域驱动设计简介.md",
+    "Framework/项目单元ProjectUnit.md",
+    "Repository/仓储层MoRepository.md",
+    "SignalR/MoSignalR.md",
     "服务间调用MoRpcInvocation.md",
-    "getting-started.md",
+    "待办事项.md",
     "模块MoModule.md",
+    "AutoModel/自动模型AutoModel.md",
+    "DomainDrivenDesign/应用服务MoApplicationService.md",
+    "Configuration/配置类MoConfiguration.md",
+    "BackgroundJob/后台任务BackgroundJob.md",
+    "DataChannel/消息通路DataChannel.md",
+    "Tool/统一返回模型Res.md",
+    "Repository/工作单元UnitOfWork.md",
+    "DependencyInjection/自动依赖注入MoDependency.md",
+    "welcome.md",
+    "getting-started.md",
     "模块MoModule3.md",
     "Framework",
-    "Repository/工作单元UnitOfWork.md",
     "Authority",
-    "Repository/仓储层MoRepository.md",
-    "DomainDrivenDesign/应用服务MoApplicationService.md",
-    "BackgroundJob/后台任务BackgroundJob.md",
-    "DependencyInjection/自动依赖注入MoDependency.md",
-    "SignalR/MoSignalR.md",
     "BackgroundJob",
-    "DomainDrivenDesign/领域服务MoDomainService.md",
     "SignalR",
-    "待办事项.md",
-    "Tool/统一返回模型Res.md",
     "DomainDrivenDesign/增删改接口服务MoCrudService.md",
     "attachments/Pasted image 20250422111135.png",
     "attachments/Pasted image 20250422110718.png",

@@ -4,8 +4,6 @@ sidebar_position: 2
 
 # 模块MoModule
 
-## 模块MoModule
-
 ## 概述
 
 `MoLibrary` 是一个模块化的基础设施库，以 `ASP.NET Core` 为基础，大程度上解耦基础设施、库间的依赖，允许您单独使用某个模块而无需引入整个繁重的框架。
