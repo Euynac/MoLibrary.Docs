@@ -1,5 +1,7 @@
+# 领域驱动设计简介
 
-# 为什么需要 Domain-driven design(DDD)
+
+## 为什么需要 Domain-driven design(DDD)
 
 我很看重事物发展过程的“自然”面。
 
@@ -14,7 +16,7 @@
 代码的质量如果不加以控制，就一定会迅速腐烂变质。这是一个客观规律，就像在热力学第三定律中，熵总是会增加一样。对于软件开发而言，“概念完整性”就相当于热力学第三定律中的熵，是衡量软件项目混乱程度的重要指标。DDD 就是目前维护软件项目“概念完整性”的最佳良药
 
 
-# 概述
+## 概述
 
 它是一套应对复杂软件系统分析和设计的面向对象建模的方法论。
 
@@ -29,7 +31,7 @@
 简要来说，它就是业务领域的`OOP`。它将业务进行抽象，进而明确各个对象间的关系、职责，是微服务划分、业务架构设计的指导思想。
 
 
-## 业务与技术的关系
+### 业务与技术的关系
 
 `DDD`可辅助我们理解系统的复杂性，我们可从业务和技术的两个角度出发进行设计。以DDD术语来说，就是`战术设计`与`战略设计`。从业务上对需求模块进行划分，即是在将业务`领域`划分为`子域`。在技术上进行的项目代码的划分，即是在划分`限界上下文`。
 简单梳理一下，领域需要划分，限界上下文也需要划分。一个是业务上抽象的划分，一个是技术上，开项目的实际划分，即抽象与实际。
@@ -51,11 +53,11 @@
 开发人员需要与领域专家一起来进行领域的划分，一起进行领域模型的建模，先有抽象，才有具象。（领域专家其实就是业务专家）
 ![](../attachments/Pasted%20image%2020250422104306.png)
 
-# DDD分层架构最佳实践
+## DDD分层架构最佳实践
 
 ![](../attachments/Pasted%20image%2020250422110718.png)
 
-# 术语
+## 术语
 
 DDD的“通用语言”。
 
@@ -100,32 +102,32 @@ DDD的“通用语言”。
 | 遵奉者          | Conformist [CF]                       | 下游团队直接使用上游团队的模型、语言（即下游Domain直接依赖上游Domain）                                                                         |
 
 
-## 战略设计（Strategic Design）
+### 战略设计（Strategic Design）
 
 划分领域
 
 > During the strategic phase of domain-driven design (DDD), you are mapping out the business domain and defining bounded contexts for your domain models.
 
-## 战术设计（Tactical Design）
+### 战术设计（Tactical Design）
 
 分析领域模型
 
 > Tactical DDD is when you define your domain models with more precision. 
 > The tactical patterns are applied within a single bounded context.
 
-## 通用语言（Ubiquitous Language）
+### 通用语言（Ubiquitous Language）
 
 领域专家和开发人员应建立并使用通用语言进行交流。
 
 可以是一组术语、一个简单的用例场景。
 
-## 领域事件
+### 领域事件
 
 领域中发生的事情。
 
 通常用名词+动词命名，动词为过去分词形式。如UserPasswordChanged
 
-## 应用服务
+### 应用服务
 
 它位于DDD分层架构的应用层
 
@@ -137,7 +139,7 @@ DDD的“通用语言”。
 
 应用服务运用已经建模好的一些对象，不是所说的业务逻辑。
 
-## 领域服务
+### 领域服务
 
 它位于DDD分层架构的领域层。
 
@@ -153,7 +155,7 @@ DDD的“通用语言”。
 
 
 
-# 步骤
+## 步骤
 
 1. 我们要明确业务领域。先从宏观上简单的划分子域，当然领域的划分会随着讨论趋于完善与稳定。划分子域同时要考虑它依赖什么子域，将当前阶段能考虑到的都划分出去。我们可以通过领域专家描述业务场景并记录，在划分领域、建模领域模型时非常有效。
 

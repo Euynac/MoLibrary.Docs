@@ -1,8 +1,10 @@
-# MoFramework依赖注入规则
+# 自动依赖注入MoDependency
+
+## MoFramework依赖注入规则
 
 MoFramework使用自动依赖注入机制，无需手动注册应用服务、领域服务和仓储。
 
-## 自动注册原理
+### 自动注册原理
 
 - 自动注册基于`IMoDependency`接口，位于`MoLibrary.DependencyInjection.AppInterfaces`命名空间
 - 以下类型将被自动注册：
@@ -11,7 +13,7 @@ MoFramework使用自动依赖注入机制，无需手动注册应用服务、领
   - 继承自`MoApplicationService<THandler, TRequest, TResponse>`的应用服务
   - 实现`IMoDependency`接口的其他类型
 
-## 注册规则
+### 注册规则
 
 1. **仓储**：
    - 仓储接口以自身接口类型注册
@@ -23,7 +25,7 @@ MoFramework使用自动依赖注入机制，无需手动注册应用服务、领
 3. **应用服务**：
    - 应用服务以自身类型注册（例如`CommandHandlerLogin`）
 
-## 配置
+### 配置
 
 在`Program.cs`中，只需一个配置即可启用自动依赖注入：
 
@@ -33,7 +35,7 @@ builder.Services.AddMoDependencyInjectionDefaultProvider();
 
 `RelatedAssemblies`参数指定要扫描的程序集，通常包括所有领域模型、仓储和服务。
 
-## 注意事项
+### 注意事项
 
 - 不要手动注册应用服务、领域服务和仓储，因为这可能导致重复注册
 - 特殊类型（如IdGenerator、自定义服务等）仍需手动注册
