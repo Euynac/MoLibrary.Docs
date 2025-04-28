@@ -1,5 +1,7 @@
+# 仓储层MoRepository
 
-# 变量定义
+
+## 变量定义
 
 > 变量表示特定上下文参数，并用`$`包围。
 
@@ -7,7 +9,7 @@
 - `$PrimaryKeyType$`: 实体主键的类型。
 - `$DbContextName$`: 特定业务领域的DbContext名称。
 
-# MoRepository规则
+## MoRepository规则
 
 - 仓储负责数据访问，应遵循标准仓储模式。
 - 业务实体仓储应包含：
@@ -17,7 +19,7 @@
 
 
 
-## 实体类
+### 实体类
 
 - 必须继承自`MoEntity<$EntityKeyType$>`（单一主键）或`MoEntity`（多主键）。
 
@@ -35,7 +37,7 @@ public class User : MoEntity<Guid>, IHasEntitySelfConfig<User>
 ```
 
 
-## 仓储接口
+### 仓储接口
 
 - 命名为`IRepository$EntityName$`。
 - 扩展`IMoRepository<$EntityName$, $EntityKeyType$>`（单一主键）或`IMoRepository<$EntityName$>`（多主键）。
@@ -51,7 +53,7 @@ public interface IRepositoryUser : IMoRepository<User, Guid>
 }
 ```
 
-## 仓储实现
+### 仓储实现
 
 - 命名为`Repository$EntityName$`。
 - 继承自仓储接口和`MoRepository<$EntityName$, $EntityKeyType$>`（或多主键的`MoRepository<$EntityName$>`）。
@@ -75,7 +77,7 @@ public class RepositoryUser(IDbContextProvider<UserDbContext> dbContextProvider)
 
 ```
 
-# 内置仓储方法
+## 内置仓储方法
 
 对于简单的CRUD操作，使用基础仓储中的以下内置方法。无需在接口中定义它们。
 
@@ -110,7 +112,7 @@ Task UpdateManyAsync(IEnumerable<TEntity> entities, bool autoSave = false, Cance
 
 
 
-# 待完善
+## 待完善
 
 - [ ] 仅需定义仓储即可获得默认实现，如`IRepositoryUser`, 定义后其默认实现同`IMoRepository<TEntity, TKey>` （暂未实现）
 - [ ] 直接使用`IMoRepository<TEntity, TKey>`也有其默认实现

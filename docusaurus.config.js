@@ -56,20 +56,21 @@ const config = {
             'https://github.com/Euynac/MoLibrary/tree/main/docs/',
           // 设置文档路由基础路径
           routeBasePath: '/docs',
-          // 使用自定义的侧边栏生成器
-          sidebarItemsGenerator: createSidebarItemsGenerator({
-            // 使用文件名作为文档标签
-            useFileNameAsLabel: true,
-            // 使用文件夹名作为分类标签
-            useFolderNameAsCategory: true,
-            // 将驼峰式命名转换为空格分隔的标题
-            transformLabel: (name) => {
-              return name
-                // .replace(/([A-Z])/g, ' $1') // 在大写字母前添加空格
-                // .replace(/^./, (str) => str.toUpperCase()) // 首字母大写
-                .trim();
-            },
-          }),
+          
+          // // 使用自定义的侧边栏生成器
+          // sidebarItemsGenerator: createSidebarItemsGenerator({
+          //   // 使用文件名作为文档标签
+          //   useFileNameAsLabel: true,
+          //   // 使用文件夹名作为分类标签
+          //   useFolderNameAsCategory: true,
+          //   // 将驼峰式命名转换为空格分隔的标题
+          //   transformLabel: (name) => {
+          //     return name
+          //       // .replace(/([A-Z])/g, ' $1') // 在大写字母前添加空格
+          //       // .replace(/^./, (str) => str.toUpperCase()) // 首字母大写
+          //       .trim();
+          //   },
+          // }),
         },
         blog: {
           showReadingTime: true,

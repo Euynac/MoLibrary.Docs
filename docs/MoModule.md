@@ -4,12 +4,12 @@ sidebar_position: 2
 
 # 模块MoModule
 
-# 概述
+## 概述
 
 `MoLibrary` 是一个模块化的基础设施库，以 `ASP.NET Core` 为基础，大程度上解耦基础设施、库间的依赖，允许您单独使用某个模块而无需引入整个繁重的框架。
 模块化是 `MoLibrary` 的核心设计理念，通过 `MoModule` 机制将基础设施划分为可独立使用的功能单元。
 
-## 特性
+### 特性
 
 1. **统一直觉的注册方式**：所有模块都遵循相同的注册和配置模式，上手简易。
 2. **自动中间件注册**：只需配置依赖注入，无需手动注册中间件。
@@ -19,7 +19,7 @@ sidebar_position: 2
 6. **自动解决中间件顺序**：无需手动管理中间件的注册顺序。
 7. **可视化依赖关系**：及时提醒可能的注册失败、误操作等。
 
-## 组成部分
+### 组成部分
 
 `MoModule`作为库的核心注册机制，每个Library有一个或多个`Module`，每个`Module`组成如下：
 
@@ -28,7 +28,7 @@ sidebar_position: 2
 3. `Module{ModuleName}`: 含有依赖注入的方式以及配置ASP.NET Core中间件等具体实现
 4. `ModuleBuilderExtensions{ModuleName}`: 面向用户的扩展方法
 
-## 使用方式
+### 使用方式
 
 开发者使用原生的方式注册Module，每个Module的方式都类似如下示例：
 
@@ -56,7 +56,7 @@ public class ModuleGuideAuthorization
 ```
 
 
-### 模块配置
+#### 模块配置
 
 为了提高开发者设置的优先级，在开发者`AddMoModule`的过程中，配置`Option`的`Action`设置如果不是模块第一次注册，仍会覆盖上一次的配置设置。这是因为模块的级联注册可能在开发者使用模块之前，已经进行了模块的配置。
 
@@ -68,7 +68,7 @@ public class ModuleGuideAuthorization
 
 > 来自模块级联注册的Option的优先级始终比用户Order低1，这是通过级联注册`GuideFrom`判断实现的
 
-#### 模块额外配置
+##### 模块额外配置
 
 `Guide`类中提供`ConfigureExtraOption`用以配置额外模块配置类
 
@@ -77,7 +77,7 @@ public TModuleGuideSelf ConfigureExtraOption<TOption>(Action<TOption> extraOptio
 ```
 
 
-### 模块级联注册
+#### 模块级联注册
 
 模块内部进行级联注册时可采用如下方法获取`Guide`类进行进一步配置。
 
@@ -94,14 +94,14 @@ protected TOtherModuleGuide DependsOnModule<TOtherModuleGuide>()  where TOtherMo
 
 
 
-# 原理
+## 原理
 
-## MoDomainTypeFinder 
+### MoDomainTypeFinder 
 
 用于获取当前应用程序相关程序集及搜索，可设置业务程序集。
 用于Core扫描相关程序集所有类型进行自动注册、项目单元发现等，提高整个框架的性能。
 
-## ModuleBuilderExtensions
+### ModuleBuilderExtensions
 
 依赖注入背后的设置方式
 
@@ -113,30 +113,30 @@ public static ModuleGuideAuthorization AddMoModuleAuthorization<TEnum>(this ISer
 }
 ```
 
-## MoModuleRegisterCentre
+### MoModuleRegisterCentre
 
 模块注册中心，用以控制整个模块注册生命周期。
 
-### 注册流程
+#### 注册流程
 
 遍历模块注册请求上下文字典`ModuleRegisterContextDict`，对于每个Key，代表存在一个`Module`类型的请求。
 
 
 
-#### ConfigureBuilder
+##### ConfigureBuilder
 
-#### ConfigureServices
+##### ConfigureServices
 
-#### PostConfigureServices
+##### PostConfigureServices
 
 在执行遍历业务程序集类`IWantIterateBusinessTypes`后配置服务依赖注入
 
-#### ConfigureApplicationBuilder
+##### ConfigureApplicationBuilder
 
 配置应用程序管道
 
 
 
-### 模块配置
+#### 模块配置
 
 模块配置包含模块本身配置`ModuleOption`及额外配置`ModuleExtraOption`，

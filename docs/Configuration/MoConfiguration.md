@@ -1,9 +1,11 @@
+# 配置类MoConfiguration
+
 
 这是独立自主研发的配置注册方式。集成`dapr`热配置，集成`ASP.NET Core Configuration `以及 应用`Option Pattern`，用法与原生一致。
 
 
 
-## 1. 定义配置
+### 1. 定义配置
 当前额外定义了两种标签`[Configuration]`和`[OptionSetting]`
 ```cs
 [Configuration]
@@ -23,7 +25,7 @@ public class AppSettings
 标签的作用是用于自动注册配置类到程序，无需手动配置。
 
 
-## 2. 获取配置
+### 2. 获取配置
 
 一般用法是与ASP.NET Core的Option Pattern原生用法一致。
 
@@ -37,7 +39,7 @@ Option Pattern是框架已经注册了如下三种形式的配置接口：
 
 另外也可以通过自行实现的全局配置管理器 `HotConfiguration` 获取配置。
 
-### 支持热配置的配置数据源
+#### 支持热配置的配置数据源
 
 | 数据源  | 是否支持热配置 | 备注  |
 | :--- | :------ | :-- |
@@ -47,9 +49,9 @@ Option Pattern是框架已经注册了如下三种形式的配置接口：
 |      |         |     |
 |      |         |     |
 
-## 热配置设置
+### 热配置设置
 
-### 配置服务
+#### 配置服务
 
 `ConfigurationAssemblyLocation` 设置除了项目`Entry`程序集外额外扫描的程序集。
 
@@ -81,15 +83,15 @@ Option Pattern是框架已经注册了如下三种形式的配置接口：
 
 日志
 [Dynamically replace the contents of a C# method? - Stack Overflow](https://stackoverflow.com/questions/7299097/dynamically-replace-the-contents-of-a-c-sharp-method)
-### 
+#### 
 
 
-### 原生选项标签
+#### 原生选项标签
 - **ConfigurationKeyName**： 使用`[ConfigurationKeyName("xxx")]`标签来设定别名。如若Configuration类未设置Section，而又需要针对单个选型设置Secition，可以使用如下格式路由名：`ConfigSectionName:OptionName`，多层可以用多个Section。
 - **MaxLength**：【验证】限制最大长度
 - **RegularExpression**：【验证】值必须满足此正则表达式
 
-## 配置源
+### 配置源
 
 默认情况下，ASP.NET Core web apps 自动读取下列配置（优先级由高到低）：
 1. Command-line arguments

@@ -1,4 +1,6 @@
-# `Res<T>`泛型类型介绍
+# 统一返回模型Res
+
+## `Res<T>`泛型类型介绍
 
 要快速返回错误响应，请使用以下模式：
 
@@ -21,7 +23,7 @@ public override async Task<Res<ResponseUserCheck>> Handle(QueryUserCheck request
 if ((await userManger.FillUserInfo(user)).IsFailed(out error)) return error;
 ```
 
-## `Res<T>`的基本定义
+### `Res<T>`的基本定义
 
 ```csharp
 public record Res<T> : IServiceResponse
