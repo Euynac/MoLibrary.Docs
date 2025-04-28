@@ -11,10 +11,15 @@
             "id": "6c2c1b8e1ef69e08",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "SignalR/MoSignalR.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "MoSignalR"
             }
           }
         ]
@@ -138,12 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "SignalR/MoSignalR.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of MoSignalR"
             }
           },
           {
@@ -201,25 +207,28 @@
   },
   "active": "6c2c1b8e1ef69e08",
   "lastOpenFiles": [
+    "Repository/UnitOfWork.md",
+    "SignalR/MoSignalR.md",
+    "Repository/MoRepository.md",
+    "EventBus/ModelEventBus.md",
+    "EventBus",
+    "Untitled.md",
+    "BackgroundJob/BackgroundJob.md",
+    "DomainDrivenDesign/DDDIntroduction.md",
+    "DependencyInjection/MoDependency.md",
     "DataChannel/MoDataChannel.md",
     "AutoModel/AutoModel.md",
     "Configuration/MoConfiguration.md",
-    "DependencyInjection/MoDependency.md",
     "Tool/Res.md",
     "_待办事项.md",
-    "Repository/UnitOfWork.md",
-    "Repository/MoRepository.md",
     "Framework/ProjectUnit.md",
     "AI-based编程.md",
     "MoModule.md",
     "_服务间调用MoRpcInvocation.md",
     "DomainDrivenDesign/MoApplicationService.md",
-    "SignalR/MoSignalR.md",
     "_项目开发.md",
-    "DomainDrivenDesign/DDDIntroduction.md",
     "DomainDrivenDesign/MoDomainService.md",
     "Intro.md",
-    "BackgroundJob/后台任务BackgroundJob.md",
     "welcome.md",
     "getting-started.md",
     "模块MoModule3.md",
@@ -238,12 +247,9 @@
     "DataChannel",
     "Tool",
     "Configuration",
-    "Repository",
     "仓储MoRepository.md",
     "attachments/Pasted image 20250408100610.png",
     "attachments/Pasted image 20250408100554.png",
-    "primary-constructor.md",
-    "ComputerScience/MyLibrary/MoModule.md",
     "attachments/d5c19e6587b245290ad303ae6af8e09.png",
     "attachments/Pasted image 20250325173137.png",
     "attachments/Pasted image 20241113151503.png",
