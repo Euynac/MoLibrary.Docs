@@ -94,6 +94,19 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/molibrary-social-card.jpg',
+      // // 添加 Algolia DocSearch 配置
+      // algolia: {
+      //   // Algolia Application ID
+      //   appId: 'YOUR_APP_ID',
+      //   // 公开的搜索API密钥
+      //   apiKey: 'YOUR_SEARCH_API_KEY',
+      //   // 索引名称
+      //   indexName: 'molibrary',
+      //   // 可选配置
+      //   contextualSearch: true,
+      //   // 可选：配置搜索页面路径，默认为false
+      //   searchPagePath: 'search',
+      // },
       navbar: {
         title: 'MoLibrary',
         logo: {
