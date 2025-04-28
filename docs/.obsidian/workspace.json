@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SignalR/MoSignalR.md",
+                "file": "Repository/UnitOfWork.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "MoSignalR"
+              "title": "UnitOfWork"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SignalR/MoSignalR.md",
+                "file": "Repository/UnitOfWork.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of MoSignalR"
+              "title": "Outline of UnitOfWork"
             }
           },
           {
@@ -207,8 +207,8 @@
   },
   "active": "6c2c1b8e1ef69e08",
   "lastOpenFiles": [
-    "Repository/UnitOfWork.md",
     "SignalR/MoSignalR.md",
+    "Repository/UnitOfWork.md",
     "Repository/MoRepository.md",
     "EventBus/ModelEventBus.md",
     "EventBus",
