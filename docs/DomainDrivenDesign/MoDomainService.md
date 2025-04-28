@@ -2,7 +2,7 @@
 
 ## 领域服务
 
-[领域服务](领域驱动设计简介#领域服务)是领域内的核心业务逻辑服务。
+[领域服务](DDDIntroduction.md#领域服务)是领域内的核心业务逻辑服务。
 
 - 领域服务类必须继承自`MoDomainService<TSelfDomainService>`。
 - 类名建议以`Domain`开头。
