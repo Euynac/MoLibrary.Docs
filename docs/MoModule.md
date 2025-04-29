@@ -68,13 +68,6 @@ public class ModuleGuideAuthorization
 
 > 来自模块级联注册的Option的优先级始终比用户Order低1，这是通过级联注册`GuideFrom`判断实现的
 
-##### 模块额外配置
-
-`Guide`类中提供`ConfigureExtraOption`用以配置额外模块配置类
-
-```cs
-public TModuleGuideSelf ConfigureExtraOption<TOption>(Action<TOption> extraOptionAction, EMoModuleOrder order = EMoModuleOrder.Normal) where TOption : IMoModuleExtraOption<TModule>
-```
 
 
 #### 模块级联注册
@@ -119,7 +112,11 @@ public static ModuleGuideAuthorization AddMoModuleAuthorization<TEnum>(this ISer
 
 #### 注册流程
 
-遍历模块注册请求上下文字典`ModuleRegisterContextDict`，对于每个Key，代表存在一个`Module`类型的请求。
+##### 模块注册与依赖检查
+
+1. 遍历模块注册请求上下文字典`ModuleRegisterContextDict`，对于每个Key，代表存在一个`Module`类型模块的注册请求。
+2. 对于每个模块注册请求信息，初始化模块相关配置类`InitFinalConfigures`，用于构建模块实例。
+3. 对于每个模块类进行实例化，模块类如果是`MoModuleWithDependencies`则调用`ClaimDependencies` 进一步填充`ModuleRegisterContextDict`。
 
 
 
