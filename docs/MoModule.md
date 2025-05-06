@@ -112,26 +112,30 @@ public static ModuleGuideAuthorization AddMoModuleAuthorization<TEnum>(this ISer
 
 #### 注册流程
 
-##### 模块注册与依赖检查
+##### 注册服务`MoModuleRegisterServices`
+
+用户注册配置`Module`完毕后，在`builder.Builder()`之前调用`MoModuleRegisterServices`用于初始化注册`MoModule`
 
 1. 遍历模块注册请求上下文字典`ModuleRegisterContextDict`，对于每个Key，代表存在一个`Module`类型模块的注册请求。
-2. 对于每个模块注册请求信息，初始化模块相关配置类`InitFinalConfigures`，用于构建模块实例。
-3. 对于每个模块类进行实例化，模块类如果是`MoModuleWithDependencies`则调用`ClaimDependencies` 进一步填充`ModuleRegisterContextDict`。
+2. 对于每个模块类使用默认配置（获取模块相关配置类使用反射创建实例）进行临时实例化，用于测试模块类，如果是`MoModuleWithDependencies`则调用`ClaimDependencies` 进一步填充`ModuleRegisterContextDict`。
+3. 再次重新遍历，对于每个模块注册请求信息，初始化模块相关配置类`InitFinalConfigures`，用于构建真正的模块实例。
 
+对于每个模块实例，按顺序调用如下方法：
+1. `ConfigureBuilder`
+2. `ConfigureServices`
+3. `PostConfigureServices`：在执行遍历业务程序集类`IWantIterateBusinessTypes`后配置服务依赖注入
 
+##### 注册中间件 `MoModuleUseMiddlewares`
 
-##### ConfigureBuilder
+用户注册完服务后，开始配置应用程序管道时，应要调用`MoModuleUseMiddlewares`用于自动配置`MoModule`的中间件。
 
-##### ConfigureServices
+```cs
+var app = builder.Build();
+app.MoModuleUseMiddlewares(); // 在所有中间件构建之前配置
+```
 
-##### PostConfigureServices
-
-在执行遍历业务程序集类`IWantIterateBusinessTypes`后配置服务依赖注入
-
-##### ConfigureApplicationBuilder
-
-配置应用程序管道
-
+对于每个模块实例，按顺序调用如下方法：
+1.  `ConfigureApplicationBuilder`：配置应用程序管道
 
 
 #### 模块配置
