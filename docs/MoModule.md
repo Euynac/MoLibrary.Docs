@@ -23,24 +23,24 @@ sidebar_position: 2
 
 `MoModule`作为库的核心注册机制，每个Library有一个或多个`Module`，每个`Module`组成如下：
 
-1. `ModuleOption{ModuleName}`: 模块Option的设置
-2. `ModuleGuide{ModuleName}`: 模块配置的向导类
+1. `Module{ModuleName}Option`: 模块Option的设置
+2. `Module{ModuleName}Guide`: 模块配置的向导类
 3. `Module{ModuleName}`: 含有依赖注入的方式以及配置ASP.NET Core中间件等具体实现
-4. `ModuleBuilderExtensions{ModuleName}`: 面向用户的扩展方法
+4. `Module{ModuleName}BuilderExtensions`: 面向用户的扩展方法
 
 ### 使用方式
 
 开发者使用原生的方式注册Module，每个Module的方式都类似如下示例：
 
 ```cs
-services.AddMoModuleAuthorization(Action<ModuleOptionAuthorization> option = null)
+services.AddMoModuleAuthorization(Action<ModuleAuthorizationOption> option = null)
 ```
 
 
 其中注册方法返回值为ModuleGuide，用于指引用户进一步配置模块相关功能
 
 ```cs
-public class ModuleGuideAuthorization
+public class ModuleAuthorizationGuide
 {
      public ModuleGuideAuthorization AddPermissionBit<TEnum>(string claimTypeDefinition) where TEnum : struct, Enum
  {
@@ -86,7 +86,6 @@ protected TOtherModuleGuide DependsOnModule<TOtherModuleGuide>()  where TOtherMo
 
 
 
-
 ## 原理
 
 ### MoDomainTypeFinder 
@@ -99,9 +98,9 @@ protected TOtherModuleGuide DependsOnModule<TOtherModuleGuide>()  where TOtherMo
 依赖注入背后的设置方式
 
 ```cs
-public static ModuleGuideAuthorization AddMoModuleAuthorization<TEnum>(this IServiceCollection services, string claimTypeDefinition) where TEnum : struct, Enum
+public static ModuleAuthorizationGuide AddMoModuleAuthorization<TEnum>(this IServiceCollection services, string claimTypeDefinition) where TEnum : struct, Enum
 {
-    return new ModuleGuideAuthorization()
+    return new ModuleAuthorizationGuide()
         .AddDefaultPermissionBit<TEnum>(claimTypeDefinition);
 }
 ```
