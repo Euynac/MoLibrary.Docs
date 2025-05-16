@@ -33,7 +33,7 @@ sidebar_position: 2
 开发者使用原生的方式注册Module，每个Module的方式都类似如下示例：
 
 ```cs
-services.AddMoModuleAuthorization(Action<ModuleAuthorizationOption> option = null)
+services.ConfigModuleAuthorization(Action<ModuleAuthorizationOption> option = null)
 ```
 
 
