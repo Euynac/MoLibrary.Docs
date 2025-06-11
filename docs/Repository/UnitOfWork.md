@@ -39,6 +39,14 @@
 
 
 
+## 错误排查
+
+### 并发异常
+
+如出现并发异常或未知错误，如`Sqlite`出现：`SQLite Error 5: 'unable to delete/modify user-function due to active statements'.` 可以检查是否存在异步方法未等待导致并发使用同一个`DbContext`，因为`DbContext`并不是线程安全的，`UnitOfWork`在一个请求`Scope`生命周期内，复用同一个`DbContext`，所以其范围内的仓储层相关异步方法必须`await`。
+
+
+
 **以下为AI生成，仅供参考，暂未整理。**
 
 
