@@ -1,25 +1,25 @@
 {
   "main": {
-    "id": "4da9e1b3f606c6d0",
+    "id": "e649c455b865e204",
     "type": "split",
     "children": [
       {
-        "id": "3f0fab441ca0a008",
+        "id": "a9bd97e48ad0bdd5",
         "type": "tabs",
         "children": [
           {
-            "id": "69326fae14693d1c",
+            "id": "f4dec5356f41d1d4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Configuration/MoConfigurationDashboard.md",
+                "file": "_待办事项.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "MoConfigurationDashboard"
+              "title": "_待办事项"
             }
           }
         ]
@@ -28,15 +28,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "bba9f44576af7889",
+    "id": "5c63b25d3cb69891",
     "type": "split",
     "children": [
       {
-        "id": "b3a90a503b87f246",
+        "id": "5e3b2ad27896b103",
         "type": "tabs",
         "children": [
           {
-            "id": "95641d9f2e99738f",
+            "id": "eb16459223bebb91",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -49,14 +49,14 @@
             }
           },
           {
-            "id": "06bae426a52ef2d9",
+            "id": "887abca01d8a41c0",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "ModuleName",
-                "matchingCase": true,
-                "explainSearch": true,
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
@@ -66,7 +66,7 @@
             }
           },
           {
-            "id": "41feecff5bebb24a",
+            "id": "a5748247861bf1f1",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -79,24 +79,24 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.5
+    "width": 300
   },
   "right": {
-    "id": "135816766e82b8ec",
+    "id": "ed9714903e96fa0c",
     "type": "split",
     "children": [
       {
-        "id": "a36754a62dd01ef4",
+        "id": "a13335270cd6aad1",
         "type": "tabs",
         "children": [
           {
-            "id": "8ef2f3d5356e308d",
+            "id": "56cad58149ab417c",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
-                "collapseAll": true,
+                "file": "_待办事项.md",
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -105,25 +105,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for VisualStudio"
+              "title": "Backlinks for _待办事项"
             }
           },
           {
-            "id": "0b98812902b5262d",
+            "id": "1c0213cd4f805f86",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SoftwareManual/VisualStudio.md",
+                "file": "_待办事项.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from VisualStudio"
+              "title": "Outgoing links from _待办事项"
             }
           },
           {
-            "id": "05fbbc6fa450d716",
+            "id": "fe9c515682299779",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -138,32 +138,7 @@
             }
           },
           {
-            "id": "2b6b6120ae063589",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Configuration/MoConfigurationDashboard.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline of MoConfigurationDashboard"
-            }
-          },
-          {
-            "id": "7c80e3ee39f1e2d4",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
-            }
-          },
-          {
-            "id": "c455a32f745a50cd",
+            "id": "fc4766988e2c24fd",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -177,21 +152,26 @@
             }
           },
           {
-            "id": "131c7c4690e127cd",
+            "id": "961a093589e29209",
             "type": "leaf",
             "state": {
-              "type": "quiet-outline",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
+              "type": "outline",
+              "state": {
+                "file": "_待办事项.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of _待办事项"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 315.5
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -205,54 +185,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "69326fae14693d1c",
+  "active": "f4dec5356f41d1d4",
   "lastOpenFiles": [
-    "Configuration/MoConfiguration.md",
-    "Configuration/MoConfigurationDashboard.md",
     "MoModule.md",
-    "DomainDrivenDesign/DDDIntroduction.md",
-    "DomainDrivenDesign/MoApplicationService.md",
-    "BackgroundJob/BackgroundJob.md",
-    "DependencyInjection/MoDependency.md",
-    "SignalR/MoSignalR.md",
-    "Tool/Res.md",
+    "Configuration/MoConfigurationDashboard.md",
     "_待办事项.md",
-    "DomainDrivenDesign/MoDomainService.md",
-    "Repository/UnitOfWork.md",
-    "Repository/MoRepository.md",
-    "EventBus/ModelEventBus.md",
-    "EventBus",
-    "Untitled.md",
-    "DataChannel/MoDataChannel.md",
-    "AutoModel/AutoModel.md",
-    "Framework/ProjectUnit.md",
-    "AI-based编程.md",
-    "_服务间调用MoRpcInvocation.md",
     "_项目开发.md",
-    "Intro.md",
-    "welcome.md",
-    "getting-started.md",
-    "模块MoModule3.md",
-    "Framework",
-    "Authority",
-    "BackgroundJob",
-    "SignalR",
-    "DomainDrivenDesign/增删改接口服务MoCrudService.md",
-    "attachments/Pasted image 20250422111135.png",
-    "attachments/Pasted image 20250422110718.png",
-    "attachments/Pasted image 20250422110119.png",
-    "attachments/Pasted image 20250422104306.png",
-    "attachments/Pasted image 20250422104130.png",
-    "AutoModel",
-    "DependencyInjection",
-    "DataChannel",
-    "Tool",
-    "Configuration",
-    "attachments/Pasted image 20250408100610.png",
-    "attachments/Pasted image 20250408100554.png",
-    "attachments/d5c19e6587b245290ad303ae6af8e09.png",
-    "attachments/Pasted image 20250325173137.png",
-    "attachments/Pasted image 20241113151503.png",
-    "未命dd名.canvas"
+    "AI-based编程.md"
   ]
 }
