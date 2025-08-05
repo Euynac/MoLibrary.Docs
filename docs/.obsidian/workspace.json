@@ -4,22 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "a9bd97e48ad0bdd5",
+        "id": "28e214c881d49851",
         "type": "tabs",
         "children": [
           {
-            "id": "f4dec5356f41d1d4",
+            "id": "11423b6d6bcbd8a6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_待办事项.md",
+                "file": "Framework/ProjectUnit.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "_待办事项"
+              "title": "ProjectUnit"
+            }
+          },
+          {
+            "id": "f78c4938a5ddb1aa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Configuration/MoConfigurationDashboard.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "MoConfigurationDashboard"
             }
           }
         ]
@@ -185,12 +200,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f4dec5356f41d1d4",
+  "active": "11423b6d6bcbd8a6",
   "lastOpenFiles": [
-    "MoModule.md",
+    "Framework/性能优化.md",
+    "Framework/ProjectUnit.md",
     "Configuration/MoConfigurationDashboard.md",
     "_待办事项.md",
     "_项目开发.md",
+    "Tool/Res.md",
+    "DataChannel/MessageDebuggerMiddleware.md",
+    "DataChannel/MoDataChannel.md",
+    "DataChannel/MoDataChannel 1.md",
+    "MoModule.md",
     "AI-based编程.md"
   ]
 }
