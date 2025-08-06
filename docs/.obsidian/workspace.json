@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Framework/ProjectUnit.md",
+                "file": "AI-based编程.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "ProjectUnit"
+              "title": "AI-based编程"
             }
           }
         ]
@@ -187,8 +187,8 @@
   },
   "active": "11423b6d6bcbd8a6",
   "lastOpenFiles": [
-    "Framework/FrameworkMonitor.md",
     "Framework/ProjectUnit.md",
+    "Framework/FrameworkMonitor.md",
     "Configuration/MoConfigurationDashboard.md",
     "_待办事项.md",
     "_项目开发.md",
