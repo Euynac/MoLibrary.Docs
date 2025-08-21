@@ -12,3 +12,11 @@
 
 
 ## BackgroundWorker
+
+### 作业设置
+
+
+```cs
+
+
+```

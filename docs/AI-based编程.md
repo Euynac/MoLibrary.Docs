@@ -280,3 +280,16 @@ claude mcp add --transport sse --scope user graphiti-memory http://localhost:800
 
 **重要提醒：** 知识图谱是您的记忆。持续使用它来提供个性化协助，尊重用户既定的程序和事实背景。
 ```
+
+
+
+## Browser MCP
+
+前端必备调试MCP。
+
+```json
+"browsermcp": {
+      "command": "npx",
+      "args": ["@browsermcp/mcp@latest"]
+    }
+```
