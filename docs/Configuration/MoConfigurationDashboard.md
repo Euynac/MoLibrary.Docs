@@ -321,13 +321,15 @@ public class DtoUpdateConfigRes
 | Enum      | None        | 下拉选择框   | 枚举值选择              |
 | Object    | None        | 对象编辑器   | 通过SubStructure嵌套展示 |
 
+> 基本类型组件有两个，一个是ObjectEditor，一个是BasicTypeEditor，ObjectEditor要根据SubStructure来嵌套使用BasicTypeEditor。
+
 ### 2. 复合类型组件映射
 
 | BasicType | SpecialType | 组件类型    | 功能说明             |
 | --------- | ----------- | ------- | ---------------- |
 | Any       | Array       | 列表编辑器   | 支持添加、删除、修改列表项    |
 | Any       | Dict        | 键值对编辑器  | 支持添加、删除键值对，编辑键和值 |
-> 复合类型的BasicType使用的组件类型复用基本类型组件映射
+> 复合类型的BasicType使用的组件类型复用基本类型组件映射，如果值是Object则使用ObjectEditor，否则使用BasicTypeEditor
 
 
 ### 3. 嵌套对象处理
