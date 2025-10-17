@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_待办事项.md",
+                "file": "BackgroundJob/MoJobScheduler.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "_待办事项"
+              "title": "MoJobScheduler"
             }
           }
         ]
@@ -188,17 +188,22 @@
   },
   "active": "2bf0c202d6741326",
   "lastOpenFiles": [
+    "BackgroundJob/Untitled.md",
+    "BackgroundJob/MoJobScheduler.md",
+    "BackgroundJob/BackgroundJob.md",
+    "DataChannel/MoDataChannel.md",
+    "DataChannel/MessageDebuggerMiddleware.md",
+    "DependencyInjection/MoDependency.md",
     "DomainDrivenDesign/AutoController.md",
     "DomainDrivenDesign/MoApplicationService.md",
-    "DomainDrivenDesign/DDDIntroduction.md",
     "DomainDrivenDesign/MoDomainService.md",
+    "_服务间调用MoRpcInvocation.md",
+    "_待办事项.md",
+    "RegisterCentre/architecture-design.md",
+    "RegisterCentre",
+    "DomainDrivenDesign/DDDIntroduction.md",
     "Configuration/MoConfiguration.md",
     "Configuration/MoConfigurationDashboard.md",
-    "BackgroundJob/MoTaskSchedule.md",
-    "BackgroundJob/Untitled.md",
-    "BackgroundJob/BackgroundJob.md",
-    "_待办事项.md",
-    "_服务间调用MoRpcInvocation.md",
     "_项目开发.md",
     "AI-based编程.md",
     "intro.md",
@@ -206,9 +211,6 @@
     "Framework/ProjectUnit.md",
     "MoModule.md",
     "EventBus/ModelEventBus.md",
-    "DependencyInjection/MoDependency.md",
-    "DataChannel/MoDataChannel.md",
-    "DataChannel/MessageDebuggerMiddleware.md",
     "Framework/FrameworkMonitor.md",
     "Tool/Res.md",
     "DataChannel/MoDataChannel 1.md"
