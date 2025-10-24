@@ -6,33 +6,33 @@
 3. 无需耦合实体代码
 
 
-### 用法
+## 用法
 
 目前`MoCrudAppService`中有使用到该技术，对于查询请求提供`Filter`，`Select`，`Fuzzy`等字段。
 
 提供
 
-### 语法
+## 语法
 
 `<FieldName1> <Condition1> "<Value1>" [or|and|&&|||] <FieldName2> <Condition2> "<Value2>"`
 - FieldName: **字段名**（默认是实体属性名）
 - Condition：**条件关键字**，目前包含`in`, `like`, `=`, `>`, `<`, `>=`, `<=`, `!=`, `explike`
 - Value: **字段比较值**。以`"`双引号包裹。内部语法根据条件关键字、字段类型变化而变化。
 
-#### 字段名
+### 字段名
 
 目前可用字段名即实体属性名
 
-#### 条件关键字
+### 条件关键字
 
 以下是有特殊功能的条件关键字
 
-##### like
+#### like
 1. 字段类型为字符串时
 - `test`代表`%test%`，查询包含`test`的
 - `test%`代表以`test`开头的，即与数据库模糊相同（当含有`%`原样输出）
 
-##### explike
+#### explike
 与：`&`
 或：`|`
 非：`!`, `！`
@@ -48,31 +48,34 @@
 - 高阶：
 	- `(AB%C | B C) & (!CE% & !CD)`  字符串相似`AB%C`或包含`B C`，而且字符串不以`CE`开头且不包含`CD`
 
-##### in
+#### in
 1. 字段类型为字符串时
 - `佛山,深圳` 字符串等于佛山或等于深圳
 2. 字段类型为时间时（暂未实现）
 - `EOBT in "[now, now+30min]"`
 
+#### is
+专门用于判断`null`或`not null`的等，注意，空字符串不是`null`，判断空字符串要使用 `FieldName = ""`
 
-#### 字段比较值
+
+### 字段比较值
 
 内部会将传入的字符串比较值转为实体字段相关类型进行比较。
 目前支持的类型：`double`,`int`,`long`,`Enum`,`string`,`boolean`,`DateTime`,`DateOnly`,`TimeOnly`,`Guid`,`TimeSpan`
 
 
-##### DateTime，DateOnly类型
+#### DateTime，DateOnly类型
 支持格式为`yyyy-MM-dd`, `yyyyMMdd`, `MMdd`, `yyyy-MM-dd HHmmss`, `yyMMdd`
 以及时间表达式：`Now`, `Now+30min`
 
-###### 时间表达式
+##### 时间表达式
 当前时间：`now`
 增加某时间长度后的时间：`now + 60min`
 减去某时间长度后的时间：`now - 3.6h`, `yyyy-MM-dd + 60min`
 支持连续加减
 - 仅支持`+`或`-`
 
-##### TimeSpan类型
+#### TimeSpan类型
 支持格式为`HH:mm:ss`, `HHmm`
 以及特殊时间长度：
 - 分钟(minutes)：`1min`
