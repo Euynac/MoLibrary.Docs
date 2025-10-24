@@ -190,6 +190,9 @@
   "lastOpenFiles": [
     "BackgroundJob/Untitled.md",
     "BackgroundJob/MoJobScheduler.md",
+    "RegisterCentre/architecture-design.md",
+    "AutoModel/AutoModel.md",
+    "BackgroundJob/MoJobScheduler.md.tmp.17140.1760703585317",
     "BackgroundJob/BackgroundJob.md",
     "DataChannel/MoDataChannel.md",
     "DataChannel/MessageDebuggerMiddleware.md",
@@ -199,7 +202,6 @@
     "DomainDrivenDesign/MoDomainService.md",
     "_服务间调用MoRpcInvocation.md",
     "_待办事项.md",
-    "RegisterCentre/architecture-design.md",
     "RegisterCentre",
     "DomainDrivenDesign/DDDIntroduction.md",
     "Configuration/MoConfiguration.md",

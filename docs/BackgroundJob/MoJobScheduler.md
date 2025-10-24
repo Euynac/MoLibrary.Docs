@@ -54,6 +54,29 @@
 ### TaskState
 任务执行请求实例状态
 
+```mermaid
+stateDiagram-v2
+    [*] --> Scheduled: 延迟任务创建
+    [*] --> Enqueued: 任务创建
+
+    Scheduled --> Enqueued: 到达执行时间
+    Enqueued --> Processing: 开始执行
+    Enqueued --> Skipped: 超过并发数量限制
+    Enqueued --> Cancelled: 任务被取消
+
+    Processing --> Succeeded: 执行成功
+    Processing --> Failed: 执行失败/执行超时
+    Processing --> Cancelled: 人工等原因取消
+
+    Failed --> Processing: 重试(未达重试上限)
+    Failed --> Terminated: 达到重试上限
+
+    Skipped --> [*]
+    Succeeded --> [*]
+    Terminated --> [*]
+    Cancelled --> [*]
+```
+
 1. **Enqueued**：任务已加入队列，等待处理
 2. **Processing**：任务正在执行
 3. **Succeeded**：任务成功完成
@@ -69,6 +92,61 @@
 
 中心化管理，去中心化执行。
 Worker执行平面需要与控制平面设置同一个元数据持久层，执行平面直接修改任务实例信息。
+
+```mermaid
+graph TB
+    subgraph UI["UI 层"]
+        AdminUI[管理面板]
+    end
+
+    subgraph ControlPlane["Control Plane 控制平面"]
+        Scheduler[任务调度器]
+        TaskRegistry[任务注册中心]
+        APIController[API 控制器]
+    end
+
+    subgraph MessageBroker["Message Broker 消息分发层"]
+        EventBus[IMoEventBus]
+    end
+
+    subgraph Workers["Worker 执行平面"]
+        Worker1[Worker 1]
+        Worker2[Worker 2]
+        WorkerN[Worker N]
+    end
+
+    subgraph MetadataStore["Metadata Store 元数据持久层"]
+        TaskDefinitions[(任务定义)]
+        TaskInstances[(任务实例)]
+        TaskHistory[(任务历史)]
+    end
+
+    AdminUI -->|管理任务配置| APIController
+    AdminUI -->|触发任务执行| APIController
+    APIController -->|读写元数据| MetadataStore
+
+    Worker1 -.->|注册任务定义| TaskRegistry
+    Worker2 -.->|注册任务定义| TaskRegistry
+    WorkerN -.->|注册任务定义| TaskRegistry
+
+    TaskRegistry -->|持久化任务定义| MetadataStore
+    Scheduler -->|读取任务定义| MetadataStore
+    Scheduler -->|创建任务实例| MetadataStore
+    Scheduler -->|发布任务执行请求| EventBus
+
+    EventBus -->|分发任务| Worker1
+    EventBus -->|分发任务| Worker2
+    EventBus -->|分发任务| WorkerN
+
+    Worker1 -->|更新任务状态| MetadataStore
+    Worker2 -->|更新任务状态| MetadataStore
+    WorkerN -->|更新任务状态| MetadataStore
+
+    style ControlPlane fill:#e1f5ff
+    style Workers fill:#fff4e1
+    style MetadataStore fill:#f0f0f0
+    style MessageBroker fill:#e8f5e9
+```
 
 ### Control Plane 控制平面
 
