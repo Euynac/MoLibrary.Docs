@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BackgroundJob/Untitled.md",
+                "file": "Repository/UnitOfWork.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "UnitOfWork"
             }
           }
         ]
@@ -188,30 +188,31 @@
   },
   "active": "2bf0c202d6741326",
   "lastOpenFiles": [
-    "BackgroundJob/MoTaskSchedule.md",
-    "BackgroundJob/MoJobScheduler.md",
-    "BackgroundJob/Untitled.md",
-    "BackgroundJob/BackgroundJob.md",
-    "DependencyInjection/MoDependency.md",
-    "_待办事项.md",
-    "DomainDrivenDesign/AutoController.md",
+    "Repository/MoRepository.md",
     "DomainDrivenDesign/MoApplicationService.md",
     "DomainDrivenDesign/DDDIntroduction.md",
+    "DomainDrivenDesign/AutoController.md",
+    "_待办事项.md",
+    "_项目开发.md",
+    "MoModule.md",
+    "DataChannel/MessageDebuggerMiddleware.md",
+    "SignalR/MoSignalR.md",
+    "RegisterCentre/architecture-design.md",
+    "BackgroundJob/MoJobScheduler.md",
+    "BackgroundJob/Untitled.md",
+    "_服务间调用MoRpcInvocation.md",
+    "EventBus/ModelEventBus.md",
+    "BackgroundJob/BackgroundJob.md",
+    "BackgroundJob/MoTaskSchedule.md",
+    "DependencyInjection/MoDependency.md",
     "DomainDrivenDesign/MoDomainService.md",
     "Configuration/MoConfiguration.md",
     "Configuration/MoConfigurationDashboard.md",
-    "_服务间调用MoRpcInvocation.md",
-    "_项目开发.md",
     "AI-based编程.md",
     "intro.md",
     "Framework/性能优化.md",
     "Framework/ProjectUnit.md",
-    "MoModule.md",
-    "EventBus/ModelEventBus.md",
     "DataChannel/MoDataChannel.md",
-    "DataChannel/MessageDebuggerMiddleware.md",
-    "Framework/FrameworkMonitor.md",
-    "Tool/Res.md",
-    "DataChannel/MoDataChannel 1.md"
+    "Framework/FrameworkMonitor.md"
   ]
 }

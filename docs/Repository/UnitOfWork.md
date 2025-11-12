@@ -45,6 +45,21 @@
 
 如出现并发异常或未知错误，如`Sqlite`出现：`SQLite Error 5: 'unable to delete/modify user-function due to active statements'.` 可以检查是否存在异步方法未等待导致并发使用同一个`DbContext`，因为`DbContext`并不是线程安全的，`UnitOfWork`在一个请求`Scope`生命周期内，复用同一个`DbContext`，所以其范围内的仓储层相关异步方法必须`await`。
 
+### 出现UnitOfWork值被置空问题
+明明已经开了工作单元，但在某些代码之后，工作单元会丢失，产生`A DbContext can only be created inside a unit of work!`，定位问题发现各种乱七八糟的规律，一般是多线程操作引起的。
+
+检查代码执行流程，是否使用了 `asnyc void` 方法，跳过了一部分异步操作，导致提前结束了工作单元。
+
+
+
+
+
+
+
+
+
+
+
 
 
 **以下为AI生成，仅供参考，暂未整理。**
